@@ -28,6 +28,7 @@ body {
   }
    */
   input[type="text"] {
+    color:rgb(216, 207, 207);
     padding: 5px;
     margin-right:;
     width: 50%;
@@ -98,3 +99,12 @@ body {
     width: 23%;
 
   }
+
+  .dec{
+    color: red;
+}
+
+.inc
+{
+    color: green;
+}

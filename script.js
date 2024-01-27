@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const cryptoTableBody = document.getElementById('cryptoTableBody');
     let cryptoData = [];
   
-    // Fetch data from API
+    // Fetching  data from API
     function fetchData() {
       const apiUrl = 'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false';
       return fetch(apiUrl)
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <td>${item.symbol}</td>
           <td>$${item.current_price}</td>
           <td>$${item.total_volume}</td>
-          <td>${item.price_change_percentage_24h}</td>
+          <td class="${i.price_change_24h<0 ? 'dec' : 'inc'}">${item.price_change_percentage_24h}</td>
           <td>Mkt Cap:$${item.market_cap}</td>
         `;
         cryptoTableBody.appendChild(row);
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
       const filteredData = cryptoData.filter(item => item.name.toLowerCase().includes(searchValue) || item.symbol.toLowerCase().includes(searchValue));
       renderCryptoTable(filteredData);
     });
-  
+    
     // Event listener for sort by market cap button
     sortMarketCapButton.addEventListener('click', function() {
       const sortedData = [...cryptoData].sort((a, b) => b.market_cap - a.market_cap);
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
       renderCryptoTable(sortedData);
     });
   
-    // Fetch data and render table
+    // Fetchig data and render table
     fetchData()
       .then(data => {
         cryptoData = data;
@@ -58,4 +58,26 @@ document.addEventListener('DOMContentLoaded', function() {
       .catch(error => console.error('Error fetching data:', error));
   });
   console.log("23b")
-  
+
+
+
+  // const input=document.querySelector("input");
+// let timeout;
+// searchInput.addEventListener('input',(e)=>{
+//    debouncing(searchInput.value.toLowerCase());
+// });
+
+// function debouncing(tar)
+// {
+//     clearTimeout(timeout);
+//    timeout = setTimeout(()=>{
+//        let dataToShow= cryptoData.filter(ele=>{
+//         let eleName=ele.name.toLowerCase();
+//         let symbol=ele.symbol.toLowerCase();
+//         if(eleName.indexOf(tar)!=-1 || symbol.indexOf(tar)!=-1)return true;
+//         return false;
+//        });
+
+//        renderCryptoTable(dataToShow);
+//     },500);
+// }
