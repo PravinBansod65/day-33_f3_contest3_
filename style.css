@@ -1,0 +1,100 @@
+
+*{
+  margin: 0;padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body {
+    /* font-family: Arial, sans-serif; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    background: #1A1A1C;
+    color:white
+  }
+  .headerwala{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    padding: 2vw;
+  
+  }
+  
+  /* h1 {
+    text-align: center;
+  }
+   */
+  input[type="text"] {
+    padding: 5px;
+    margin-right:;
+    width: 50%;
+    background:transparent;
+    border: 2px solid #8E8E8E;
+    padding: 10px;
+    
+  }
+  
+  #searchButton{
+    width: 10%;
+    
+  }
+  
+  button{
+    padding: 5px 10px;
+    cursor: pointer;
+    background: transparent;
+    color: #fff;
+    border: 2px solid #8E8E8E;
+    margin-right: 10px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  table {
+    width: 80vw;
+    border-collapse: collapse;
+  }
+  tr{
+    border-bottom: 2px solid #8E8E8E;
+  }
+  
+  th, td {
+    /* border: 1px solid #ddd; */
+    font-size: 1.1vw;
+    padding:15px 0;
+    text-align: right;
+  }
+  th,td:nth-of-type(2){
+    text-align: left;
+    text-transform: uppercase;
+  }
+  td img{
+    width: 15px;
+    margin-right: 9px;
+  }
+
+  th,td:nth-of-type(1){
+    text-align: left;
+  }
+  
+  th,td:nth-of-type(5){
+  color: green;
+  }
+  
+  th {
+    /* background-color: #f2f2f2; */
+  }
+  
+  tr:nth-child(even) {
+    /* background-color: #f2f2f2; */
+  }
+  
+  #sortPercentageChange ,#sortMarketCap{
+    width: 23%;
+
+  }
