@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
           <td>${item.symbol}</td>
           <td>$${item.current_price}</td>
           <td>$${item.total_volume}</td>
-          <td class="${i.price_change_24h<0 ? 'dec' : 'inc'}">${item.price_change_percentage_24h}</td>
+          <td class="${item.price_change_24h<0 ? 'dec' : 'inc'}">${item.price_change_percentage_24h}</td>
           <td>Mkt Cap:$${item.market_cap}</td>
         `;
         cryptoTableBody.appendChild(row);
