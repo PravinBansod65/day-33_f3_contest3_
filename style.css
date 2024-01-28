@@ -16,6 +16,9 @@ body {
   color: white;
 }
 .headerwala {
+  position: fixed;
+  top:0.4vw;
+left: 12%;  
   width: 80%;
   display: flex;
   flex-direction: row;
@@ -35,6 +38,7 @@ input[type="text"] {
   border: 2px solid #8e8e8e;
   padding: 10px;
   outline: none;
+  width:50%;
 }
 
 #searchButton {
@@ -55,6 +59,7 @@ button:hover {
 }
 
 table {
+  margin-top: 5vw;
   width: 80vw;
   border-collapse: collapse;
 }
@@ -69,7 +74,7 @@ td {
   padding: 15px 0;
   text-align: right;
 }
-th,
+th:nth-of-type(2),
 td:nth-of-type(2) {
   text-align: left;
   text-transform: uppercase;
@@ -79,7 +84,7 @@ td img {
   margin-right: 9px;
 }
 
-th,
+th:nth-of-type(1),
 td:nth-of-type(1) {
   text-align: left;
 }
@@ -89,24 +94,17 @@ td:nth-of-type(5) {
   color: green;
 }
 
-th {
-  /* background-color: #f2f2f2; */
-}
-
-tr:nth-child(even) {
-  /* background-color: #f2f2f2; */
-}
 
 #sortPercentageChange,
 #sortMarketCap {
   /* width: 23%; */
 }
 
-.dec {
-  color: red;
+.dec{
+  color: red !important;
 }
 
-.inc {
+.inc{
   color: green;
 }
 
@@ -125,4 +123,10 @@ tr:nth-child(even) {
   #searchButton {
     width: 25%;
   }
+}
+
+
+th{
+  color:rgb(0 255 44);
+  /* background: grey; */
 }
